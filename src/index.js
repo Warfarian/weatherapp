@@ -1,6 +1,4 @@
-
-// Getting the div's to display content
-let displayData = document.getElementsByClassName('displayData');
+import './styles.css'
 let temp = document.getElementById('temp');
 let weather = document.getElementById('weather');
 let humidity = document.getElementById('humidity');
@@ -11,8 +9,12 @@ let country = document.getElementById('country');
 let lastUpdate = document.getElementById('lastUpdate');
 let feelsLike = document.getElementById('feelsLike');
 let img = document.querySelector('img');
-function search() {
-    try{
+
+
+let Fetch = document.getElementById('search');
+Fetch.addEventListener('click' , Search);
+
+function Search() {
         let search = document.getElementById('searchTerm').value;
         fetch (`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search}?key=MPDQXDPQP82TXTNW56T7VBYRQ`,{mode : 'cors'})
             .then(function(response){
@@ -45,11 +47,4 @@ function search() {
                 province.textContent = sepCity[1];
                 country.textContent = sepCity[2];
                 })
-    }
-    catch(err){
-        temp.textContent = err;
-        img.src = "https://cdn.donmai.us/original/23/74/__original_drawn_by_lennsan__23744c129612bd1b99b580376512744e.gif"
-    }
-
 }
-
