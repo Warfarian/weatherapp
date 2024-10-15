@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+body {
+    font-family: 'VT323';
+}
+
+a {
+    text-decoration: none;
+    color: beige;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 60px;
+}
+
+input {
+    padding: 10px;
+    width: 350px;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: 'VT323';
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: white;
+    font-family: 'VT323';
+}
+
+input:focus {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+input:hover {
+    border: 0;
+    outline: 0;
+    background-color: rgba(250, 235, 215, 0.185);
+    transition: ease-in-out 500ms;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin: 25px auto;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-family: 'VT323';
+    width: auto;
+    border-radius: 8px;
+    height: auto;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.468);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+button:hover {
+    background-color: rgba(250, 235, 215, 0.419);
+}
+
+.displayData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    color: white;
+    width: 100%;
+    height: 70vh;
+    gap: 20px;
+}
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 40px;
+    gap: 10px;
+}
+
+#temp {
+    font-size: 120px;
+    margin-bottom: 30px;
+}
+
+#temp::after{
+    content: ' °C';
+    font-size: 120px;
+    margin-bottom: 30px;
+}
