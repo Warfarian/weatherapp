@@ -112,6 +112,6 @@ button:hover {
 
 #temp::after{
     content: ' °F';
-    font-size: 119px;
+    font-size: 120px;
     margin-bottom: 30px;
 }
